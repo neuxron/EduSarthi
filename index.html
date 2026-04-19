@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+    <title>EduSarthi | Professional Learning App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- SPLASH SCREEN -->
+    <div id="splash" class="screen active">
+        <div class="glass-card splash-card">
+            <div class="logo-icon">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h1>EduSarthi</h1>
+            <p id="splashText">Your Learning Companion</p>
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <!-- LOGIN SCREEN -->
+    <div id="login" class="screen">
+        <div class="glass-card">
+            <i class="fas fa-chalkboard-user" style="font-size: 2.5rem; color: #2d6a4f;"></i>
+            <h2 id="loginTitle">Welcome to EduSarthi</h2>
+            <p id="loginSub">Sign in to continue</p>
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" id="studentName" placeholder="Full Name">
+            </div>
+            <div class="input-group">
+                <i class="fas fa-phone-alt"></i>
+                <input type="tel" id="studentNumber" placeholder="Mobile Number">
+            </div>
+            <button id="loginBtn" class="btn-primary">Continue →</button>
+        </div>
+    </div>
+
+    <!-- LANGUAGE SCREEN -->
+    <div id="language" class="screen">
+        <div class="glass-card">
+            <h2 id="langTitle">Choose Language</h2>
+            <p id="langSub">Select your preferred language</p>
+            <div id="langList" class="lang-grid"></div>
+            <button id="langNext" class="btn-primary">Next →</button>
+        </div>
+    </div>
+
+    <!-- SETUP SCREEN -->
+    <div id="setup" class="screen">
+        <div class="glass-card">
+            <h2 id="setupTitle">Complete Your Profile</h2>
+            <div class="input-group">
+                <i class="fas fa-layer-group"></i>
+                <select id="classSelect"></select>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-building"></i>
+                <select id="boardSelect">
+                    <option>CBSE</option>
+                    <option>State Board</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-school"></i>
+                <input type="text" id="schoolName" placeholder="School Name">
+            </div>
+            <div class="subjects-group">
+                <label id="subjectsLabel">Select Subjects:</label>
+                <div id="subjectsList" class="subjects-grid"></div>
+            </div>
+            <button id="saveSetup" class="btn-primary">Save & Start →</button>
+        </div>
+    </div>
+
+    <!-- DASHBOARD -->
+    <div id="dashboard" class="screen">
+        <div class="dashboard-header">
+            <div class="greeting">
+                <i class="fas fa-user-circle"></i>
+                <div>
+                    <span id="welcomePrefix">Hello,</span>
+                    <h3 id="welcomeName">Student</h3>
+                </div>
+            </div>
+            <button id="settingsBtn" class="icon-btn"><i class="fas fa-cog"></i></button>
+        </div>
+        <div class="tab-bar">
+            <button class="tab-btn active" data-tab="subjects"><i class="fas fa-book-open"></i> <span id="subjectsTabText">Subjects</span></button>
+            <button class="tab-btn" data-tab="progress"><i class="fas fa-chart-line"></i> <span id="progressTabText">Progress</span></button>
+        </div>
+        <div id="subjectsTab" class="tab-pane active">
+            <div id="subjectsContainer" class="subjects-list"></div>
+        </div>
+        <div id="progressTab" class="tab-pane">
+            <div class="glass-card">
+                <h3 id="progressTitle">Learning Progress</h3>
+                <div class="radial-progress" id="radialProgress">
+                    <span>0%</span>
+                </div>
+                <div id="progressStats" class="progress-stats"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SUBJECT CHAPTERS -->
+    <div id="subjectDetail" class="screen">
+        <div class="header-nav">
+            <button id="backToDash" class="back-btn"><i class="fas fa-arrow-left"></i></button>
+            <h2 id="subjectTitle">Subject</h2>
+        </div>
+        <div id="chaptersList" class="chapters-list"></div>
+    </div>
+
+    <!-- QUIZ SCREEN -->
+    <div id="quizScreen" class="screen">
+        <div class="header-nav">
+            <button id="closeQuiz" class="back-btn"><i class="fas fa-times"></i></button>
+            <h2 id="quizHeader">Quiz</h2>
+        </div>
+        <div id="quizContent" class="quiz-container"></div>
+    </div>
+
+    <!-- SETTINGS MODAL -->
+    <div id="settingsModal" class="modal">
+        <div class="modal-content glass-card">
+            <h3 id="settingsTitle">Settings</h3>
+            <button id="resetApp" class="btn-danger">Reset All Data</button>
+            <button id="closeSettings" class="btn-outline">Cancel</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
