@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduSarthi Learner</title>
+  <link rel="stylesheet" href="learner.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="dashboard">
+    <aside class="sidebar">
+      <div class="logo">🎓 EduSarthi</div>
+      <nav>
+        <a href="#" class="active">📊 Dashboard</a>
+        <a href="#">📚 My Subjects</a>
+        <a href="#">📝 Assignments</a>
+        <a href="#">🎥 Videos</a>
+        <a href="#">📅 Tests</a>
+        <a href="#">🏆 Achievements</a>
+      </nav>
+      <button class="logout-btn" onclick="logoutLearner()">🚪 Logout</button>
+    </aside>
+    <main class="main">
+      <header>
+        <h1>Welcome back, <span id="learnerName"></span> 👋</h1>
+        <p id="learnerClass"></p>
+      </header>
+      <div class="stats">
+        <div class="stat-card"><span>📘</span><h3>12</h3><p>Notes</p></div>
+        <div class="stat-card"><span>📝</span><h3>5</h3><p>Assignments</p></div>
+        <div class="stat-card"><span>🎥</span><h3>8</h3><p>Videos</p></div>
+        <div class="stat-card"><span>🏆</span><h3>92%</h3><p>Avg Score</p></div>
+      </div>
+      <div class="subjects-section">
+        <h2>📚 Your Subjects</h2>
+        <div id="subjectsGrid" class="subjects-grid-dash"></div>
+      </div>
+      <div class="two-col">
+        <div class="card"><h3>📌 Recent Activity</h3><ul id="recent"></ul></div>
+        <div class="card"><h3>📊 Progress</h3><div class="progress-item"><span>Maths</span><div class="bar"><div style="width:65%"></div></div></div></div>
+      </div>
+    </main>
+  </div>
+  <script type="module" src="learner.js"></script>
+</body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Teacher Dashboard</title>
+
+  <link rel="stylesheet" href="teacher.css">
+
+</head>
+
+<body>
+
+<!-- =========================
+     DASHBOARD HEADER
+========================= -->
+
+<header class="dashboard-header">
+
+  <div>
+
+    <h1>Teacher Dashboard</h1>
+
+    <p>
+      Manage notes, assignments and students
+    </p>
+
+  </div>
+
+  <div class="teacher-profile">
+
+    <h3 id="teacherNameDisplay">
+      Teacher
+    </h3>
+
+    <button class="logout-btn"
+    onclick="logoutTeacher()">
+
+      Logout
+
+    </button>
+
+  </div>
+
+</header>
+
+<!-- =========================
+     DASHBOARD GRID
+========================= -->
+
+<section class="dashboard-grid">
+
+  <!-- NOTES -->
+
+  <div class="dashboard-card">
+
+    <h2>📘 Upload Notes</h2>
+
+    <input type="text" placeholder="Notes Title">
+
+    <input type="file">
+
+    <button onclick="uploadNotes()">
+      Upload Notes
+    </button>
+
+  </div>
+
+
+  <!-- ASSIGNMENT -->
+
+  <div class="dashboard-card">
+
+    <h2>📝 Upload Assignment</h2>
+
+    <input type="text" placeholder="Assignment Title">
+
+    <input type="file">
+
+    <button onclick="uploadAssignment()">
+      Upload Assignment
+    </button>
+
+  </div>
+
+
+  <!-- VIDEO -->
+
+  <div class="dashboard-card">
+
+    <h2>🎥 Upload Video</h2>
+
+    <input type="text" placeholder="Video Title">
+
+    <input type="url" placeholder="YouTube Video Link">
+
+    <button onclick="uploadVideo()">
+      Upload Video
+    </button>
+
+  </div>
+
+
+  <!-- TEST -->
+
+  <div class="dashboard-card">
+
+    <h2>📄 Create Test</h2>
+
+    <input type="text" placeholder="Test Name">
+
+    <input type="date">
+
+    <button onclick="createTest()">
+      Publish Test
+    </button>
+
+  </div>
+
+
+  <!-- ANNOUNCEMENT -->
+
+  <div class="dashboard-card">
+
+    <h2>📢 Announcement</h2>
+
+    <textarea placeholder="Write announcement"></textarea>
+
+    <button onclick="postAnnouncement()">
+      Post Announcement
+    </button>
+
+  </div>
+
+
+  <!-- STUDENTS -->
+
+  <div class="dashboard-card">
+
+    <h2>👨‍🎓 Students</h2>
+
+    <div class="student-box">
+
+      <p>Total Students</p>
+
+      <h3>120</h3>
+
+    </div>
+
+    <div class="student-box">
+
+      <p>Active Today</p>
+
+      <h3>84</h3>
+
+    </div>
+
+    <button onclick="viewStudents()">
+      View Students
+    </button>
+
+  </div>
+
+
+  <!-- PROGRESS -->
+
+  <div class="dashboard-card">
+
+    <h2>📊 Student Progress</h2>
+
+    <div class="progress-item">
+
+      <p>Class 10 Science</p>
+
+      <div class="progress-bar">
+
+        <div class="progress-fill" style="width:75%"></div>
+
+      </div>
+
+    </div>
+
+    <div class="progress-item">
+
+      <p>Class 9 Maths</p>
+
+      <div class="progress-bar">
+
+        <div class="progress-fill" style="width:60%"></div>
+
+      </div>
+
+    </div>
+
+    <button onclick="checkProgress()">
+      Full Report
+    </button>
+
+  </div>
+
+</section>
+
+<!-- =========================
+     QUICK STATS SECTION
+========================= -->
+
+<section class="dashboard-grid">
+
+  <!-- RECENT ACTIVITY -->
+
+  <div class="dashboard-card">
+
+    <h2>⚡ Recent Activity</h2>
+
+    <ul class="activity-list">
+
+      <li>Notes uploaded successfully</li>
+
+      <li>2 new students joined</li>
+
+      <li>Assignment published</li>
+
+      <li>Science test scheduled</li>
+
+    </ul>
+
+  </div>
+
+
+  <!-- UPCOMING TASKS -->
+
+  <div class="dashboard-card">
+
+    <h2>📅 Upcoming Tasks</h2>
+
+    <ul class="activity-list">
+
+      <li>Upload Maths Notes</li>
+
+      <li>Check Assignment Submissions</li>
+
+      <li>Create Weekly Test</li>
+
+      <li>Post New Announcement</li>
+
+    </ul>
+
+  </div>
+
+
+  <!-- PERFORMANCE -->
+
+  <div class="dashboard-card">
+
+    <h2>🏆 Performance</h2>
+
+    <div class="student-box">
+
+      <p>Average Attendance</p>
+
+      <h3>88%</h3>
+
+    </div>
+
+    <div class="student-box">
+
+      <p>Assignment Completion</p>
+
+      <h3>73%</h3>
+
+    </div>
+
+  </div>
+
+</section> 
+
+<script src="teacher.js"></script>
+
+</body>
+</html>
